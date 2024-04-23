@@ -1,14 +1,14 @@
 
 import os
 import random
-import time
 import sys
+import time
 import pygame as pg
 
 
 WIDTH, HEIGHT = 1200, 600
 
-DELTA = {                          #移動量辞書
+DELTA = {  #移動量辞書
     pg.K_UP:(0,-5),
     pg.K_DOWN:(0,+5),
     pg.K_LEFT:(-5,0),
@@ -43,7 +43,7 @@ def main():
 
     clock = pg.time.Clock()
     tmr = 0
-    RIGHT_img = pg.transform.flip(kk_img, False, True) #画像の反転を作成
+    RIGHT_img = pg.transform.flip(kk_img, False, True)  #画像の反転を作成
     LEFT_img = kk_img
     """
     練習1コウカトン向き
@@ -76,10 +76,10 @@ def main():
             BG_img.set_alpha(200)
             screen.blit(BG_img,BG_rct)
             fonto = pg.font.Font(None,80)
-            txt = fonto.render("Game Over",True,(255,255,255))      #Game Over 表示
+            txt = fonto.render("Game Over",True,(255,255,255))  #Game Over 表示
             txt_rct = txt.get_rect()
             txt_rct.center = WIDTH/2,HEIGHT/2
-            screen.blit(cry_img,[390,270])      #コウカトン
+            screen.blit(cry_img,[390,270])  #コウカトン
             screen.blit(cry_img,[780,270])
             screen.blit(txt, txt_rct)
 
@@ -96,7 +96,7 @@ def main():
             if key_lst[k]:
                 sum_mv[0] +=v[0]
                 sum_mv[1] +=v[1]
-        kk_img = img_dict[(sum_mv[0],sum_mv[1])]   #練習1
+        kk_img = img_dict[(sum_mv[0],sum_mv[1])]  #練習1
 
         #if key_lst[pg.K_UP]:
          #   sum_mv[1] -= 5
