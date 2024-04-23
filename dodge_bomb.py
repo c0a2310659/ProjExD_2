@@ -105,6 +105,7 @@ def main():
          #   sum_mv[0] -= 5
         #if key_lst[pg.K_RIGHT]:
          #   sum_mv[0] += 5
+         
         kk_rct.move_ip(sum_mv)
         if check_bound(kk_rct) != (True, True):
             kk_rct.move_ip(-sum_mv[0], -sum_mv[1])
