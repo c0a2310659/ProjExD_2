@@ -5,7 +5,6 @@ import sys
 import time
 import pygame as pg
 
-
 WIDTH, HEIGHT = 1200, 600
 
 DELTA = {  #移動量辞書
